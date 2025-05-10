@@ -1,0 +1,22 @@
+[package]
+name = "recru-search"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+rust-version = "1.79.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "recru_search"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "=0.31.1"
+anchor-spl = "=0.31.1"
+mpl-core = { version = "0.7.1", features = ["anchor"] }
