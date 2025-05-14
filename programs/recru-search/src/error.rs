@@ -48,9 +48,37 @@ pub enum RecruSearchError {
     #[msg("Token transfer failed")]
     TokenTransferFailed,
 
+    /// Invalid institution name provided for researcher registration
+    #[msg("Invalid institution name")]
+    InvalidInstitutionName,
+
+    /// Invalid credentials provided for researcher
+    #[msg("Invalid credentials")]
+    InvalidCredentials,
+
+    /// Researcher is not verified
+    #[msg("Researcher is not verified")]
+    NotVerified,
+
     /// Attempted to initialize an account that is already initialized
     #[msg("Account already initialized")]
     AlreadyInitialized,
+
+    /// Attempted to use an inactive wallet
+    #[msg("Wallet is not active")]
+    InactiveWallet,
+
+    /// Reward calculation overflow
+    #[msg("Reward calculation overflow")]
+    RewardOverflow,
+
+    /// Invalid token mint
+    #[msg("Invalid token mint")]
+    InvalidTokenMint,
+
+    /// Unauthorized access
+    #[msg("Unauthorized access")]
+    Unauthorized,
 
     /// Participant is in an invalid state for the requested operation
     #[msg("Invalid participant status")]
@@ -91,4 +119,26 @@ pub enum RecruSearchError {
     /// Feedback text is too long
     #[msg("Feedback too long")]
     FeedbackTooLong,
+    
+    /// Participant already has an active consent
+    #[msg("Participant already has an active consent")]
+    DuplicateConsent,
+    
+    /// Invalid consent version provided
+    #[msg("Invalid consent version")]
+    InvalidConsentVersion,
+    
+    /// No active consent found for participant
+    #[msg("No active consent found")]
+    NoActiveConsent,
+    
+
+    
+    /// Wallet does not belong to the participant
+    #[msg("Wallet does not belong to participant")]
+    WalletMismatch,
+    
+    /// Arithmetic overflow occurred
+    #[msg("Arithmetic overflow")]
+    ArithmeticOverflow,
 } 
